@@ -19,8 +19,8 @@ export async function POST(request) {
         await transporter.sendMail({
             from: email,
             to: process.env.EMAIL_USER,
-            subject: `New message from `,
-            text: message,
+            subject: `New message from ${name} `,
+            text: '&{message} Contact: ${phone} Email:&{email}',
         });
 
         return new Response(JSON.stringify({ success: true }), { status: 200 });
