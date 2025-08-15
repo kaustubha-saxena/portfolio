@@ -14,16 +14,18 @@ const Contact = () => {
     }
     const handleSubmit = async () => {
         const res = await fetch('/api/form', {
-            method: 'POST',
-            headers: {
+      method: 'POST',
+       headers: {
+      'Content-Type': 'application/json'
+    },
+      body: JSON.stringify({
                 name: form.name,
                 email: form.email,
                 phone: form.phone,
                 message: form.message,
-            },
-            body: JSON.stringify({ message: "abcdefghijklmnopqrstuvwxyz" }),
-        });
-
+            },),
+    });
+        
     }
 
     const [form, setform] = useState({ name: "", email: "", phone: "", message: "" })
@@ -38,7 +40,7 @@ const Contact = () => {
                         <div className='text-xl font-medium leading-10 text-center' >
 
                             <h3>
-                                Let’s Create Something Amazing Together!
+                                Let&apos;s Create Something Amazing Together!
                             </h3>
                             <p>
                                 Whether you have a project in mind, a collaboration idea, or just want to say hi — my inbox is always open.
@@ -82,7 +84,7 @@ const Contact = () => {
                                 </div>
 
                                 <div className=' flex justify-center items-center w-full'>
-                                    <input type="submit" value="Submit" className='px-3 rounded-lg border-1  hover:bg-[#333333]  hover:cursor-pointer py-1 font-medium bg-black text-white ' />
+                                    <input type="submit"   value="Submit" className='px-3 rounded-lg border-1  hover:bg-[#333333]  hover:cursor-pointer py-1 font-medium bg-black text-white ' />
                                 </div>
 
                             </form>
