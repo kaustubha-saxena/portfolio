@@ -21,7 +21,7 @@ const Hero = () => {
                
                 <div className='flex flex-col justify-center w-[50%] h-full  px-20 relative '>
 
-                    <h1 className='text-7xl font-bold font-[Poppins] text-black'>Hi! I'm</h1>
+                    <h1 className='text-7xl font-bold font-[Poppins] text-black'>Hi! I&apos;m</h1>
                     <h1 style={{ WebkitTextStroke: "1px black" }} className='text-9xl font-[Poppins] font-bold text-transparent  selection:text-green-600  '>Kaustubha</h1>
                     <TextType
                         text={["I build beautiful websites...", "I solve complex problems...", "I turn ideas into reality."]}
