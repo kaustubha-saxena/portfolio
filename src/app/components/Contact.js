@@ -3,15 +3,30 @@ import React from 'react'
 import Link from 'next/link'
 import { useState } from 'react'
 const Contact = () => {
-  const handleChange = (e) => {
+    const handleChange = (e) => {
         const { id, value } = e.target;
         setform((prevForm) => ({
             ...prevForm,
             [id]: value,
         }));
+
+
+    }
+    const handleSubmit = async () => {
+        const res = await fetch('/api/form', {
+            method: 'POST',
+            headers: {
+                name: form.name,
+                email: form.email,
+                phone: form.phone,
+                message: form.message,
+            },
+            body: JSON.stringify({ message: "abcdefghijklmnopqrstuvwxyz" }),
+        });
+
     }
 
-    const [form, setform] = useState({name:"",email:"",phone:"",message:""})
+    const [form, setform] = useState({ name: "", email: "", phone: "", message: "" })
     return (
 
         <>
@@ -20,31 +35,31 @@ const Contact = () => {
                 <div className='flex justify-center items-center gap-10 '>
                     <div className='w-[40%]'>
 
-                    <div className='text-xl font-medium leading-10 text-center' >
+                        <div className='text-xl font-medium leading-10 text-center' >
 
-                        <h3>
-                            Let’s Create Something Amazing Together!
-                        </h3>
-                        <p>
-                            Whether you have a project in mind, a collaboration idea, or just want to say hi — my inbox is always open.
-                        </p>
-                    </div>
-                    <div className='pt-10 font-semibold text-center leading-10'>
+                            <h3>
+                                Let’s Create Something Amazing Together!
+                            </h3>
+                            <p>
+                                Whether you have a project in mind, a collaboration idea, or just want to say hi — my inbox is always open.
+                            </p>
+                        </div>
+                        <div className='pt-10 font-semibold text-center leading-10'>
                             <p>Email: kaustubhsaxena@gmail.com</p>
                             <p>Phone: +91 9555331875</p>
-                    </div>
-                    <div className='flex gap-5 justify-center items-center py-5'>
-                      <Link href={"https://x.com/KaustubhaSaxena"}> <img className='w-[40px] hover:translate-y-[-5px] transition-transform ' src="x.webp" alt="" /></Link>
-                       <Link href={"https://www.linkedin.com/in/kaustubha-saxena/"}><img className='w-[40px] hover:translate-y-[-5px] transition-transform ' src="linkedin.webp" alt="" /></Link>
-                       <Link href={"https://github.com/kaustubha-saxena"}><img className='w-[40px] hover:translate-y-[-5px] transition-transform ' src="github.webp" alt="" /></Link>
-                       <Link href={"https://www.instagram.com/kaustubha.saxena/"}><img className='w-[40px] hover:translate-y-[-5px] transition-transform ' src="instagram.webp" alt="" /></Link>
-                    </div>
+                        </div>
+                        <div className='flex gap-5 justify-center items-center py-5'>
+                            <Link href={"https://x.com/KaustubhaSaxena"}> <img className='w-[40px] hover:translate-y-[-5px] transition-transform ' src="x.webp" alt="" /></Link>
+                            <Link href={"https://www.linkedin.com/in/kaustubha-saxena/"}><img className='w-[40px] hover:translate-y-[-5px] transition-transform ' src="linkedin.webp" alt="" /></Link>
+                            <Link href={"https://github.com/kaustubha-saxena"}><img className='w-[40px] hover:translate-y-[-5px] transition-transform ' src="github.webp" alt="" /></Link>
+                            <Link href={"https://www.instagram.com/kaustubha.saxena/"}><img className='w-[40px] hover:translate-y-[-5px] transition-transform ' src="instagram.webp" alt="" /></Link>
+                        </div>
                     </div>
                     <div className='w-[50%] flex justify-center items-center px-10 '>
 
                         <div className='w-fit  bg-[#dcdcdc] rounded-xl  px-10 py-5'>
 
-                            <form action="" className='flex flex-col justify-center items-start gap-3 '>
+                            <form onSubmit={handleSubmit} className='flex flex-col justify-center items-start gap-3 '>
                                 <div className='flex flex-col'>
 
                                     <label htmlFor="name" className=' font-semibold'>Name</label>

@@ -1,9 +1,8 @@
 "use client";
 import React from 'react'
-import SplashCursor from './SplashCursor'
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 import TextType from './TextType';
-import MagnetLines from './UICompoents/MagnetLines';
+
 
 const Hero = () => {
 
