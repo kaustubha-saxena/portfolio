@@ -8,7 +8,7 @@ const ProjectsCard = ({Project}) => {
    <div className='bg-[#e9e9e9] w-[50%] h-full flex flex-col p-5 rounded-xl shadow-xl' >
 
     <div className=' bg-amber-300 w-full'>
-<video autoPlay muted   loop  className='w-full' src="Video2.mp4"></video>
+<video autoPlay muted   loop  className='w-full' src={`${Project.video}`}></video>
     </div>
     <div>
 <h3 className='text-2xl font-bold pt-5'>{Project.name}</h3>
@@ -32,7 +32,9 @@ const ProjectsCard = ({Project}) => {
 <button className='px-3 rounded-lg border-1  hover:bg-[#333333]  hover:cursor-pointer py-1 font-medium bg-black text-white '>View Code</button>
 </Link>
 <Link href={`${Project.visit}`}>
-<button className='px-3 rounded-lg border-1  hover:bg-[#333333]  hover:cursor-pointer py-1 font-medium bg-black text-white '>Visit</button>
+<button className='px-3 rounded-lg border-1  hover:bg-[#333333]  hover:cursor-pointer py-1 font-medium bg-black text-white '>
+    
+    Visit</button>
 </Link>
 
 

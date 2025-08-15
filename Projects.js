@@ -13,6 +13,6 @@ export const projects=[
         tech:["React","Next.js", "Tailwind Css", "Framer Motion"],
         visit:"https://the-roasted-garden.vercel.app/",
         code:"https://github.com/kaustubha-saxena/The-Roasted-Garden",
-        video:"video/The-Roasted_Garden.mp4"
+        video:"video/The-Roasted-Garden.mp4"
     }
 ]
