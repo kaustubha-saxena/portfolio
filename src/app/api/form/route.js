@@ -20,7 +20,7 @@ export async function POST(request) {
             from: email,
             to: process.env.EMAIL_USER,
             subject: `New message from ${name} `,
-            text: '&{message} Contact: ${phone} Email:&{email}',
+            text: `${message} Contact: ${phone} Email:${email}`,
         });
 
         return new Response(JSON.stringify({ success: true }), { status: 200 });
