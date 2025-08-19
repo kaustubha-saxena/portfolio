@@ -21,8 +21,7 @@ const ProjectsCard = ({Project}) => {
         ))
     }
     
-       
-    
+
 
 </div>
     </div>
@@ -36,9 +35,11 @@ const ProjectsCard = ({Project}) => {
     
     Visit</button>
 </Link>
-
-
-
+<Link href={`${Project.score}`}>
+<button className='px-3 rounded-lg border-1  hover:bg-[#333333]  hover:cursor-pointer py-1 font-medium bg-black text-white '>
+    
+    View Score</button>
+</Link>
     </div>
    </div>
    </>

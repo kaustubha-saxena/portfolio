@@ -5,7 +5,9 @@ export const projects=[
         tech:["React","Next.js", "Tailwind Css", "Framer Motion", "MongoDB"],
         visit:"https://bookenplek.vercel.app/",
         code:"https://github.com/kaustubha-saxena/Bokenplek",
-        video:"video/Bookenplek.mp4"
+        video:"video/Bookenplek.mp4",
+        score:"https://pagespeed.web.dev/analysis/https-bookenplek-vercel-app/eupa27ikf5?form_factor=desktop"
+
     },
     {
         name:"The Roasted Garden – Café Website",
@@ -13,6 +15,7 @@ export const projects=[
         tech:["React","Next.js", "Tailwind Css", "Framer Motion"],
         visit:"https://the-roasted-garden.vercel.app/",
         code:"https://github.com/kaustubha-saxena/The-Roasted-Garden",
-        video:"video/The-Roasted-Garden.mp4"
+        video:"video/The-Roasted-Garden.mp4",
+        score:"https://pagespeed.web.dev/analysis/https-the-roasted-garden-vercel-app/rr27d11sim?form_factor=desktop"
     }
 ]
